@@ -1,0 +1,57 @@
+<!Doctype html>
+<html>
+	<head>
+	<style>
+	#tags{position:relative;
+    right: 400px;
+    width: 300px;
+	border: 3px solid yellow;
+    }
+	.button{background-color:yellow;
+	}
+	</style>
+		<meta charset="utf-8">
+		<title>News Fetcher</title>
+		<!--JS links -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+		<!--CSS links -->
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}">
+
+		
+	</head>
+	<body>
+		<div class="container">
+			 
+			 	
+				    <h1 style="margin-left:6px;"><b><font color="yellow">News Fetcher<br>
+					<b><font color="yellow"><p><h2>Find any current news easily!!</p></h1></h2></font>				 	<form method="POST" action="/search">
+				    <input style="margin-right:400px;" id="tags" type="text" name="search" placeholder="https://example.com"autofocus="on" list="defaultURLs">
+				    <datalist id="defaultURLs">
+				    	<option value="https://timesofindia.indiatimes.com/" label="Times Of India">
+	<option value="https://WWW.HindustanTimes.com/" label="Hindustan Times">			    	<option value="https://www.tribuneindia.com/" label="TribuneIndia">
+				    </datalist>
+				    <br>
+				    <button style="margin-right:100px;"  class="button" id="getResult" ><i class="fa fa-search"></i><left>Search</button>				    
+				    </form>
+				    <h3 style="color: white;">{{msg}}</h3>
+				
+				
+				
+			    
+
+			    {% block body %}
+			    
+			    {% endblock %}
+			
+		</div>
+
+		
+	</body>
+</html>
